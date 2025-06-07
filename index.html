@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TODO List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 p-0 font-[Poppins] box-border">
+
+  <div class="w-full min-h-screen bg-gradient-to-br from-[#475e3d] to-[#b9d5e6] p-2 flex justify-center items-start">
+    <div class="w-full max-w-[540px] bg-white mt-24 mb-5 p-10 rounded-xl shadow-lg">
+      
+      <!-- Header -->
+      <h2 class="text-[#475e3d] flex items-center justify-center mb-5 text-2xl font-semibold">
+        TODO List
+        <img src="" alt="" class="w-[30px] ml-2" />
+      </h2>
+
+      <!-- Input Row -->
+      <div class="flex items-center justify-between bg-[#edeef0] rounded-full pl-5 pr-2 mb-6">
+        <input 
+          type="text" 
+          id="input-box" 
+          placeholder="Add anything" 
+          class="flex-1 border-none outline-none bg-transparent py-2 px-0 text-base"
+        />
+        <button 
+          onclick="addTask()" 
+          class="bg-[#475e3d] text-white text-base font-medium py-4 px-10 rounded-full hover:bg-[#3a4d32] transition"
+        >
+          Add
+        </button>
+      </div>
+
+      <!-- Task List -->
+      <ul id="list-container" class="space-y-2">
+        <!-- Sample Task:
+        <li class="relative pl-12 pr-12 py-3 text-[17px] cursor-pointer select-none before:absolute before:top-2 before:left-2 before:w-7 before:h-7 before:rounded-full before:bg-center before:bg-cover before:bg-[url('checkbox.png')]">
+          Task Item
+          <span class="absolute top-[5px] right-0 w-10 h-10 text-[22px] leading-[40px] text-[#475e3d] text-center rounded-full hover:bg-[#edeef0] cursor-pointer">
+            &times;
+          </span>
+        </li>
+        -->
+      </ul>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
