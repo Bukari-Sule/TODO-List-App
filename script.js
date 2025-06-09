@@ -11,7 +11,7 @@ function addTask() {
     li.className = "flex items-center gap-3 pl-2 pr-12 py-3 text-[17px] relative cursor-pointer group";
 
     const checkbox = document.createElement("img");
-    checkbox.src = "checkbox.png";
+    checkbox.src = "image/checkbox.png";
     checkbox.className = "w-6 h-6 toggle-check";
     li.appendChild(checkbox);
 
@@ -41,7 +41,7 @@ listContainer.addEventListener("click", function (e) {
         const isChecked = li.classList.toggle("checked");
 
         if (isChecked) {
-            img.src = "check-square.png";
+            img.src = "image/check-square.png";
             text.classList.add("line-through", "text-gray-500");
         } else {
             img.src = "checkbox.png";
@@ -78,5 +78,17 @@ function showTask() {
         }
     });
 }
+
+
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          'poppins': ['Poppins', 'sans-serif'],
+        }
+      }
+    }
+  };
+
 
 showTask();
